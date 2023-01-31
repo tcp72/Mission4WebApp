@@ -4,6 +4,7 @@
 
 $("#btnSend").click(function () { //assumes that click is an event listener
 
+    //initialize variables
     let grade = 0.0;
     let display = " ";
 
@@ -14,8 +15,10 @@ $("#btnSend").click(function () { //assumes that click is an event listener
     var final = ($("#pctFinal").val() * .1);
     var intex = ($("#pctIntex").val() * .1);
 
+    //determine overall numeric grade
     grade = assign + project + quiz + midterm + final + intex;
 
+    //calculate letter
     if (grade >= 94) {
         display = "A";
     }
@@ -58,5 +61,5 @@ $("#btnSend").click(function () { //assumes that click is an event listener
     alert("The letter grade is " + display);
 
     $("#displayID").html(`Final Letter Grade: ${display}`); //displayID is in the form; display is from the JS
-
+    $("#displayGradeID").html(`Final Letter Number: ${grade.toFixed(2)}`);
 });
