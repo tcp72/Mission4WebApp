@@ -56,10 +56,6 @@ $("#btnSend").click(function () { //assumes that click is an event listener
         display = "E";}
 
     //output
-
-    alert("The number grade is " + grade);
-    alert("The letter grade is " + display);
-
     $("#displayID").html(`Final Letter Grade: ${display}`); //displayID is in the form; display is from the JS
     $("#displayGradeID").html(`Final Letter Number: ${grade.toFixed(2)}`);
 });
