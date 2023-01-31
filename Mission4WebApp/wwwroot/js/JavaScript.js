@@ -2,33 +2,20 @@
 
 //this is the jquery
 
-
-
-
 $("#btnSend").click(function () { //assumes that click is an event listener
+
     let grade = 0.0;
-    let dispay = " ";
+    let display = " ";
 
-    alert("the function was called");
+    var assign = ($("#pctAssignments").val() * .5);
+    var project = ($("#pctProject").val() * .1);
+    var quiz = ($("#pctQuiz").val() * .1);
+    var midterm = ($("#pctMidterm").val() * .1);
+    var final = ($("#pctFinal").val() * .1);
+    var intex = ($("#pctIntex").val() * .1);
 
-    grade = 0.0;
-    grade += $("pctAssignments");
-    grade += $("pctProject");
-    grade += $("pctQuiz");
-    grade += $("pctMidterm");
-    grade += $("pctFinal");
-    grade += $("pctAssignments");
-    grade += $("pctIntex");
+    grade = assign + project + quiz + midterm + final + intex;
 
-    if (grade >= 94) display = "A"
-    else if (grade >= 90) display = "A-"
-    alert("The grade is " + display);
-
-};
-
-
-
-/*
     if (grade >= 94) {
         display = "A";
     }
@@ -48,7 +35,7 @@ $("#btnSend").click(function () { //assumes that click is an event listener
         display = "C+";
     }
     else if (grade >= 74) {
-        display = "C;
+        display = "C";
     }
     else if (grade >= 70) {
         display = "C-";
@@ -67,11 +54,9 @@ $("#btnSend").click(function () { //assumes that click is an event listener
 
     //output
 
-    alert("The grade is " + display);
-    $("displayID").html('Final Letter Grade: ${display}'); //displayID is in the form; display is from the JS
+    alert("The number grade is " + grade);
+    alert("The letter grade is " + display);
 
-    //document.getElementById("displayID").innerHTML = display;
-    //return display;
-    });
+    $("#displayID").html(`Final Letter Grade: ${display}`); //displayID is in the form; display is from the JS
 
-*/
+});
