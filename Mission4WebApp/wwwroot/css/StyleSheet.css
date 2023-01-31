@@ -1,0 +1,31 @@
+﻿body {
+    font-family: 'Trebuchet MS';
+    background-color: lightcyan;
+     
+}
+
+div {
+    padding: 30px;
+}
+
+label {
+    font-size: 20px;
+    color: darkcyan;
+    width: 1500px;
+    display: inline-block;
+}
+
+h1 {
+    background-color: lightcyan;
+}
+
+.myimg {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+textarea {
+    font-size: 20px;
+}
