@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+@{
+    ViewData["Title"] = "Grade Calculator Page"; //this is saying to build ViewData; needs "", not '
+}
+
+@model formViewModel;
+<!--Don't need this anymore because of the code I added to _ViewImports  (AT)model Mission4WebApp.Models.formViewModel; -->
+
+<h2>Grade Calculator</h2>
+
+<!--This is the form-->
+<form method="post">
+    <label>Assignments Category (50%):</label>
+    <input id="pctAssignments" asp-for="Assignment" type="number" /> <br />
+
+    <label>Group Project Category (10%):</label>
+    <input id="pctProject" asp-for="Project" type="number" /> <br />
+
+    <label>Quizzes Category (10%):</label>
+    <input id="pctQuiz" asp-for="Quiz" type="number" /> <br />
+
+    <label>Midterm Exam Category (10%):</label>
+    <input id="pctMidterm" asp-for="Exam" type="number" /> <br />
+
+    <label>Final Exam Category (10%):</label>
+    <input id="pctFinal" asp-for="Final" type="number" /> <br />
+
+    <label>INTEX category (10%):</label>
+    <input id="pctIntex" asp-for="Intex" type="number" /> <br />
+
+    <h4 id="displayID"></h4><br />
+    <h4 id="displayGradeID"></h4><br />
+
+    <input id="btnSend" type="submit" value="Submit Grades For Calculation" />
+
+    <div asp-validation-summary="All"></div>
+</form>
+
+
+<script src="js/JavaScript.js"></script>
