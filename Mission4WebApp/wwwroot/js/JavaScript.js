@@ -54,7 +54,6 @@ $("#btnSend").click(function () { //assumes that click is an event listener
     }
     else if (grade < 60) {
         display = "E";}
-
     alert("Final Letter Grade is " + display + "\nFinal letter number is " + grade);
     //output
     $("#displayID").html(`Final Letter Grade: ${display}`); //displayID is in the form; display is from the JS
