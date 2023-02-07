@@ -35,7 +35,7 @@ namespace Mission4WebApp.Models
     }
 }
 
-
+//Keep this for educational purposes to understand what was removed
 ////Setter
 //public void setFrom(string input)
 //{
